@@ -1,0 +1,69 @@
+<!doctype html><html lang="tr">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kars Kültürel Sokak Projesi</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Kars Kültürel Sokak Projesi</h1>
+      <p>Kars’ın sokak adlarına ilham olan kişiler — harita üzerinde keşfet, profilleri incele, QR ile paylaş.</p>
+    </div>
+
+    <div id="map" class="card"></div>
+
+    <h2 style="margin:16px 0">Kişiler</h2>
+    <div class="grid">
+      <div class="card">
+    <h3>Ahmet Arslan</h3>
+    <p><a class="btn" href="kisiler/ahmet-arslan.html">Profili Gör</a></p>
+</div>
+<div class="card">
+    <h3>Ali Bey</h3>
+    <p><a class="btn" href="kisiler/ali-bey.html">Profili Gör</a></p>
+</div>
+<div class="card">
+    <h3>Ali Gaffar Okan</h3>
+    <p><a class="btn" href="kisiler/ali-gaffar-okan.html">Profili Gör</a></p>
+</div>
+<div class="card">
+    <h3>Ali Rıza Bey</h3>
+    <p><a class="btn" href="kisiler/ali-riza-bey.html">Profili Gör</a></p>
+</div>
+<div class="card">
+    <h3>Arif Taşçı</h3>
+    <p><a class="btn" href="kisiler/arif-tasci.html">Profili Gör</a></p>
+</div>
+<div class="card">
+    <h3>Asım Ağçay</h3>
+    <p><a class="btn" href="kisiler/asim-agcay.html">Profili Gör</a></p>
+</div>
+    </div>
+
+    <div class="footer">© 2025 Kars • Açık kaynak ve ücretsiz barındırma: GitHub Pages</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    var map = L.map('map').setView([40.6067, 43.0975], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap katkıcıları'
+    }).addTo(map);
+
+    L.marker([40.605900, 43.097500]).addTo(map)
+      .bindPopup(`<strong>Ahmet Arslan</strong><br/><a href='kisiler/ahmet-arslan.html'>Profili aç</a>`);
+L.marker([40.607200, 43.096000]).addTo(map)
+      .bindPopup(`<strong>Ali Bey</strong><br/><a href='kisiler/ali-bey.html'>Profili aç</a>`);
+L.marker([40.603800, 43.092900]).addTo(map)
+      .bindPopup(`<strong>Ali Gaffar Okan</strong><br/><a href='kisiler/ali-gaffar-okan.html'>Profili aç</a>`);
+L.marker([40.603300, 43.099200]).addTo(map)
+      .bindPopup(`<strong>Ali Rıza Bey</strong><br/><a href='kisiler/ali-riza-bey.html'>Profili aç</a>`);
+L.marker([40.607800, 43.101400]).addTo(map)
+      .bindPopup(`<strong>Arif Taşçı</strong><br/><a href='kisiler/arif-tasci.html'>Profili aç</a>`);
+L.marker([40.606600, 43.103200]).addTo(map)
+      .bindPopup(`<strong>Asım Ağçay</strong><br/><a href='kisiler/asim-agcay.html'>Profili aç</a>`);
+  </script>
+</body></html>
