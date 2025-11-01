@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mehmettpeker.github.io/kars-sokak-projesi/sitemap.xml
