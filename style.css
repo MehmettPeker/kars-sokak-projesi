@@ -1,25 +1,104 @@
-/* Kars Theme (Ice blue + stone) */
-:root{
-  --bg:#eaf2f8; --card:#ffffff; --fg:#1f2937; --muted:#4b5563;
-  --primary:#1e3a8a; --accent:#d4a017; --border:#e5e7eb;
+/* Genel sayfa yapısı */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #f0f6fc;
+  color: #0a0a0a;
+  line-height: 1.6;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-.container{max-width:1024px;margin:0 auto;padding:20px}
-.header{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-h1,h2,h3{margin:0;color:var(--primary)}
-p{color:var(--muted);line-height:1.6}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(30,58,138,.08)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-a.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
-a.btn:hover{filter:brightness(.95)}
-.footer{margin-top:18px;color:var(--muted);font-size:.9rem}
-.profile{display:grid;grid-template-columns:160px 1fr;gap:16px}
-.profile img{width:160px;height:120px;object-fit:cover;border-radius:10px;background:#eef3fb;border:1px solid var(--border)}
-.qr{margin-top:16px;display:flex;gap:16px;align-items:center}
-.qr img{width:220px;height:220px;border-radius:6px;border:1px solid var(--border);background:white}
-/* Leaflet size */
-#map{height:460px;border-radius:16px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(17,24,39,.06);}
-.leaflet-popup-content a{color:var(--primary);text-decoration:none}
-.leaflet-popup-content a:hover{text-decoration:underline}
-@media(max-width:720px){ .profile{grid-template-columns:1fr} .profile img{width:100%;height:180px} }
+
+.header {
+  background-color: #0d1b2a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Ana içerik */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Profil bölümü */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #1b263b;
+  background-color: #e6eef5;
+}
+
+.profile-info {
+  text-align: left;
+  max-width: 800px;
+}
+
+.profile-info h2 {
+  color: #003366;
+  margin-top: 25px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 6px;
+}
+
+.profile-info p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* QR bölümü */
+.qr-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.qr-image {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.qr-info {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.back-button {
+  background-color: #1b263b;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  background-color: #415a77;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
