@@ -23,3 +23,49 @@ a.btn:hover{filter:brightness(.95)}
 .leaflet-popup-content a{color:var(--primary);text-decoration:none}
 .leaflet-popup-content a:hover{text-decoration:underline}
 @media(max-width:720px){ .profile{grid-template-columns:1fr} .profile img{width:100%;height:180px} }
+
+/* Kişi / Sokak Profili Düzeni */
+.profile {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #e9eef5;
+}
+
+.qr-code {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid #d5dce3;
+}
+
+/* Metin alanını düzenle */
+.street-section {
+    max-width: 600px;
+    margin-top: 16px;
+}
+
+.street-section h2 {
+    margin-bottom: 8px;
+}
+
+.street-section p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.footer {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
