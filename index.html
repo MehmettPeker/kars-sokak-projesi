@@ -21,6 +21,11 @@
     <div class="grid">
 
       <div class="card">
+        <h3>Vasfiye Eriş</h3>
+        <p><a class="btn" href="kisiler/vasfiye-eris.html">Profili Gör</a></p>
+      </div>
+
+      <div class="card">
         <h3>Ahmet Arslan</h3>
         <p><a class="btn" href="kisiler/ahmet-arslan.html">Profili Gör</a></p>
       </div>
@@ -71,11 +76,14 @@
   <script>
     var map = L.map('map').setView([40.6067, 43.0975], 14);
 
+    
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap katkıcıları'
     }).addTo(map);
 
+      
     L.marker([40.605900, 43.097500]).addTo(map)
       .bindPopup(`<strong>Ahmet Arslan</strong><br/><a href='kisiler/ahmet-arslan.html'>Profili aç</a>`);
 
@@ -100,6 +108,11 @@
     <!-- 📌 YENİ MARKER -->
     L.marker([40.606000, 43.098500]).addTo(map)
       .bindPopup(`<strong>Alparslan Türkeş Bulvarı</strong><br/><a href='kisiler/alparslan-turkes.html'>Profili aç</a>`);
+  
+
+    L.marker([40.59959, 43.09199]).addTo(map)
+      .bindPopup(`<strong>Vasfiye Eriş Sokak</strong><br/><a href='kisiler/vasfiye-eris.html'>Profili aç</a>`);
   </script>
+
 </body>
 </html>
