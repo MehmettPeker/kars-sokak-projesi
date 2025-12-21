@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -18,132 +19,20 @@
 
     <h2 style="margin:16px 0">Kişiler</h2>
 
-    <div class="grid">
+    <input id="search" class="card"
+      style="padding:12px;width:100%;margin:12px 0"
+      type="search"
+      placeholder="Ara: Atatürk, İnönü, Sokak, Cadde, Bulvar...">
 
-      <div class="card">
-        <h3>Vasfiye Eriş</h3>
-        <p><a class="btn" href="kisiler/vasfiye-eris.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Haydar Aliyev</h3>
-        <p><a class="btn" href="kisiler/haydar-aliyev.html">Profili Gör</a></p>
-      </div>
-      <div class="card">
-        <h3>Ahmet Arslan</h3>
-        <p><a class="btn" href="kisiler/ahmet-arslan.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Ali Bey</h3>
-        <p><a class="btn" href="kisiler/ali-bey.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Ali Gaffar Okan</h3>
-        <p><a class="btn" href="kisiler/ali-gaffar-okan.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Ali Rıza Bey</h3>
-        <p><a class="btn" href="kisiler/ali-riza-bey.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Arif Taşçı</h3>
-        <p><a class="btn" href="kisiler/arif-tasci.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Asım Ağçay</h3>
-        <p><a class="btn" href="kisiler/asim-agcay.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Teyyare Sokak</h3>
-        <p><a class="btn" href="kisiler/teyyare-sokak.html">Profili Gör</a></p>
-      </div>
-
-      <!-- 📌 YENİ EKLENEN KART -->
-      <div class="card">
-        <h3>Alparslan Türkeş</h3>
-        <p><a class="btn" href="kisiler/alparslan-turkes.html">Profili Gör</a></p>
-      </div>
-
-      <!-- 📌 YENİ EKLENEN KART 2 -->
-      <div class="card">
-        <h3>Turan Çelebi</h3>
-        <p><a class="btn" href="kisiler/turan-celebi.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Tuncer Güvensoy</h3>
-        <p><a class="btn" href="kisiler/tuncer-guvensoy.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Buzhane Sokak</h3>
-        <p><a class="btn" href="kisiler/buzhane-sokak.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Kurban Ali Çelik</h3>
-        <p><a class="btn" href="kisiler/kurban-ali-celik.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Selahattin Filtekin</h3>
-        <p><a class="btn" href="kisiler/selahattin-filtekin.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Neşe Doster</h3>
-        <p><a class="btn" href="kisiler/nese-doster.html">Profili Gör</a></p>
-      </div>
-
-      
-
-      <div class="card">
-        <h3>Şehit Hulisi Aytekin</h3>
-        <p><a class="btn" href="kisiler/sehit-hulisi-aytekin.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Şehit Polis Sadullah Keleş</h3>
-        <p><a class="btn" href="kisiler/sehit-polis-sadullah-keles.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Şehit Polis Bülent Aktaş</h3>
-        <p><a class="btn" href="kisiler/sehit-polis-bulent-aktas.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Şehit Er Emin Polat</h3>
-        <p><a class="btn" href="kisiler/sehit-er-emin-polat.html">Profili Gör</a></p>
-      </div>
-      
-      <div class="card">
-        <h3>Şehit Polis Tayfun Çele</h3>
-        <p><a class="btn" href="kisiler/sehit-polis-tayfun-cele.html">Profili Gör</a></p>
-      </div>
-      
-      <div class="card">
-        <h3>Süleyman Sokak</h3>
-        <p><a class="btn" href="kisiler/suleyman-sokak.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Necati Bey Sokak</h3>
-        <p><a class="btn" href="kisiler/necati-bey-sokak.html">Profili Gör</a></p>
-      </div>
-
-      <div class="card">
-        <h3>Resul Yıldız Caddesi</h3>
-        <p><a class="btn" href="kisiler/resul-yildiz-caddesi.html">Profili Gör</a></p>
-      </div>
+    <div id="filters" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button class="btn filter active" data-type="all">Tümü (<span id="count-all">0</span>)</button>
+      <button class="btn filter" data-type="cadde">Cadde (<span id="count-cadde">0</span>)</button>
+      <button class="btn filter" data-type="sokak">Sokak (<span id="count-sokak">0</span>)</button>
+      <button class="btn filter" data-type="bulvar">Bulvar (<span id="count-bulvar">0</span>)</button>
 
     </div>
+
+    <div class="grid" id="peopleGrid"></div>
 
     <div class="footer">© 2025 Kars • Açık kaynak ve ücretsiz barındırma: GitHub Pages</div>
   </div>
@@ -151,107 +40,195 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
-    var map = L.map('map').setView([40.6067, 43.0975], 14);
+    // ✅ TEK KAYNAK
+    const PLACES = [
+      { name: "Vasfiye Eriş", type: "Caddesi", href: "kisiler/vasfiye-eris.html", lat: 40.59959, lng: 43.09199 },
+      { name: "Haydar Aliyev", type: "Caddesi", href: "kisiler/haydar-aliyev.html", lat: 40.60398, lng: 43.09447 },
+      { name: "Ahmet Arslan", type: "Caddesi", href: "kisiler/ahmet-arslan.html", lat: 40.605900, lng: 43.097500 },
+      { name: "Ali Gaffar Okkan", type: "Bulvarı", href: "kisiler/ali-gaffar-okan.html", lat: 40.603800, lng: 43.092900 },
+      { name: "Ali Rıza Bey", type: "Sokağı", href: "kisiler/ali-riza-bey.html", lat: 40.60276, lng: 43.09404 },
+      { name: "Arif Taşçı", type: "Caddesi", href: "kisiler/arif-tasci.html", lat: 40.607800, lng: 43.101400 },
+      { name: "Asım Ağçay", type: "Sokak", href: "kisiler/asim-agcay.html", lat: 40.606600, lng: 43.103200 },
+      { name: "Teyyare", type: "Sokak", href: "kisiler/teyyare-sokak.html", lat: 40.605720, lng: 43.100860 },
+      { name: "Alparslan Türkeş", type: "Bulvarı", href: "kisiler/alparslan-turkes.html", lat: 40.606000, lng: 43.098500 },
+      { name: "Turan Çelebi", type: "Caddesi", href: "kisiler/turan-celebi.html", lat: 40.59813, lng: 43.09725 },
+      { name: "Tuncer Güvensoy", type: "Caddesi", href: "kisiler/tuncer-guvensoy.html", lat: 40.60409, lng: 43.09293 },
+      { name: "Buzhane", type: "Sokak", href: "kisiler/buzhane-sokak.html", lat: 40.60123, lng: 43.09201 },
+      { name: "Kurban Ali Çelik", type: "Caddesi", href: "kisiler/kurban-ali-celik.html", lat: 40.61133, lng: 43.10186 },
+      { name: "Selahattin Filtekin", type: "Caddesi", href: "kisiler/selahattin-filtekin.html", lat: 40.60654, lng: 43.09409 },
+      { name: "Neşe Doster", type: "Sokak", href: "kisiler/nese-doster.html", lat: 40.60037, lng: 43.09129 },
+      { name: "Şehit Hulisi Aytekin", type: "Caddesi", href: "kisiler/sehit-hulisi-aytekin.html", lat: 40.60706, lng: 43.08934 },
+      { name: "Şehit Polis Sadullah Keleş", type: "Sokak", href: "kisiler/sehit-polis-sadullah-keles.html", lat: 40.59926, lng: 43.09253 },
+      { name: "Şehit Polis Bülent Aktaş", type: "Sokak", href: "kisiler/sehit-polis-bulent-aktas.html", lat: 40.60172, lng: 43.11292 },
+      { name: "Şehit Er Emin Polat", type: "Sokak", href: "kisiler/sehit-er-emin-polat.html", lat: 40.59684, lng: 43.09295 },
+      { name: "Şehit Polis Tayfun Çele", type: "Sokak", href: "kisiler/sehit-polis-tayfun-cele.html", lat: 40.59841, lng: 43.08796 },
 
-    
+      // --- yeni 11 ---
+      { name: "Atatürk", type: "Caddesi", href: "kisiler/ataturk.html", lat: 40.60564, lng: 43.09636 },
+      { name: "Resul Yıldız", type: "Caddesi", href: "kisiler/resul-yildiz-caddesi.html", lat: 40.60067, lng: 43.09085 },
+      { name: "Necati Bey", type: "Sokak", href: "kisiler/necati-bey-sokak.html", lat: 40.60266, lng: 43.10158 },
+      { name: "Süleyman", type: "Sokak", href: "kisiler/suleyman-sokak.html", lat: 40.59913, lng: 43.08716 },
+      { name: "Celal Aras", type: "Caddesi", href: "kisiler/celal-aras.html", lat: 40.61359, lng: 43.12347 },
+      { name: "Gazi Ahmet Muhtar Paşa", type: "Caddesi", href: "kisiler/gazi-ahmet-muhtar-pasa.html", lat: 40.60488, lng: 43.09542 },
+      { name: "İbrahim Kuytul", type: "Sokak", href: "kisiler/ibrahim-kuytul.html", lat: 40.595784, lng: 43.096280 },
+      { name: "İsmail Hakkı Alaca", type: "Bulvarı", href: "kisiler/ismail-hakkı-alaca.html", lat: 40.59377, lng: 43.11882 },
+      { name: "İsmet İnönü", type: "Caddesi", href: "kisiler/ismet-inonu.html", lat: 40.600906, lng: 43.096433 },
+      { name: "Kazım Paşa", type: "Caddesi", href: "kisiler/kazim-pasa.html", lat: 40.60928, lng: 43.09428 },
+      { name: "İbrahim Ethem Aykut", type: "Caddesi", href: "kisiler/ibrahim-ethem-aykut.html", lat: 40.59890, lng: 43.08741 }
+    ];
 
+    // ---- normalize + type normalize
+    function normalizeTR(s) {
+      return (s || "")
+        .toString()
+        .toLowerCase()
+        .replaceAll("ı","i").replaceAll("İ","i")
+        .replaceAll("ş","s").replaceAll("Ş","s")
+        .replaceAll("ğ","g").replaceAll("Ğ","g")
+        .replaceAll("ü","u").replaceAll("Ü","u")
+        .replaceAll("ö","o").replaceAll("Ö","o")
+        .replaceAll("ç","c").replaceAll("Ç","c");
+    }
+
+    function typeKey(typeText){
+      const t = normalizeTR(typeText);
+      if (t.includes("bulvar")) return "bulvar";
+      if (t.includes("cadde")) return "cadde";
+      // sokak / sokağı / sokagi hepsi sokak
+      if (t.includes("sokak")) return "sokak";
+      return "other";
+    }
+
+    // ✅ Harita
+    const map = L.map('map').setView([40.6067, 43.0975], 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap katkıcıları'
     }).addTo(map);
 
-      
-    L.marker([40.605900, 43.097500]).addTo(map)
-      .bindPopup(`<strong>Ahmet Arslan</strong><br/><a href='kisiler/ahmet-arslan.html'>Profili aç</a>`);
+    // ✅ Marker listesi (filtre için saklıyoruz)
+    const markers = [];
 
-    L.marker([40.607200, 43.096000]).addTo(map)
-      .bindPopup(`<strong>Ali Bey</strong><br/><a href='kisiler/ali-bey.html'>Profili aç</a>`);
+    // ✅ Kartları + markerları üret
+    const grid = document.getElementById("peopleGrid");
 
-    L.marker([40.603800, 43.092900]).addTo(map)
-      .bindPopup(`<strong>Ali Gaffar Okan</strong><br/><a href='kisiler/ali-gaffar-okan.html'>Profili aç</a>`);
+    PLACES.forEach(p => {
+      const title = (p.name + " " + (p.type || "")).replace(/\s+/g, " ").trim();
+      const key = typeKey(p.type || "");
 
-    L.marker([40.603300, 43.099200]).addTo(map)
-      .bindPopup(`<strong>Ali Rıza Bey</strong><br/><a href='kisiler/ali-riza-bey.html'>Profili aç</a>`);
+      // --- Card
+      const card = document.createElement("div");
+      card.className = "card person";
+      card.dataset.type = key;          // ✅ filtre buradan anlayacak
+      card.dataset.search = normalizeTR(title);
 
-    L.marker([40.607800, 43.101400]).addTo(map)
-      .bindPopup(`<strong>Arif Taşçı</strong><br/><a href='kisiler/arif-tasci.html'>Profili aç</a>`);
+      card.innerHTML = `
+        <h3>${title}</h3>
+        <p><a class="btn" href="${p.href}">Profili Gör</a></p>
+      `;
+      grid.appendChild(card);
 
-    L.marker([40.606600, 43.103200]).addTo(map)
-      .bindPopup(`<strong>Asım Ağçay</strong><br/><a href='kisiler/asim-agcay.html'>Profili aç</a>`);
+      // --- Marker
+      if (typeof p.lat === "number" && typeof p.lng === "number") {
+        const m = L.marker([p.lat, p.lng]).addTo(map)
+          .bindPopup(`<strong>${title}</strong><br/><a href='${p.href}'>Profili aç</a>`);
+        markers.push({ marker: m, type: key, search: normalizeTR(title) });
+      }
+    });
 
-    L.marker([40.605720, 43.100860]).addTo(map)
-      .bindPopup(`<strong>Teyyare Sokak</strong><br/><a href='kisiler/teyyare-sokak.html'>Profili aç</a>`);
+    // ✅ Arama + Filtre (kart + marker beraber)
+    let activeType = "all";
+    let query = "";
 
-    <!-- 📌 YENİ MARKER -->
-    L.marker([40.606000, 43.098500]).addTo(map)
-      .bindPopup(`<strong>Alparslan Türkeş Bulvarı</strong><br/><a href='kisiler/alparslan-turkes.html'>Profili aç</a>`);
-  
+    function applyFilters(){
+      const cards = document.querySelectorAll(".person");
 
-    L.marker([40.59959, 43.09199]).addTo(map)
-      .bindPopup(`<strong>Vasfiye Eriş Sokak</strong><br/><a href='kisiler/vasfiye-eris.html'>Profili aç</a>`);
+      cards.forEach(card => {
+        const t = card.dataset.type;
+        const s = card.dataset.search || "";
+        const okType = (activeType === "all") ? true : (t === activeType);
+        const okSearch = query ? s.includes(query) : true;
+        card.style.display = (okType && okSearch) ? "" : "none";
+      });
 
-    L.marker([40.60398, 43.09447]).addTo(map)
-      .bindPopup(`<strong>Haydar Aliyev Caddesi</strong><br/><a href='kisiler/haydar-aliyev.html'>Profili aç</a>`);
+      markers.forEach(obj => {
+        const okType = (activeType === "all") ? true : (obj.type === activeType);
+        const okSearch = query ? obj.search.includes(query) : true;
 
-    L.marker([40.59813, 43.09725]).addTo(map)
-      .bindPopup(`<strong>Turan Çelebi Caddesi</strong><br/><a href='kisiler/turan-celebi.html'>Profili aç</a>`);
-    
-    L.marker([40.60409, 43.09293]).addTo(map)
-      .bindPopup(`<strong>Tuncer Güvensoy Caddesi</strong><br/><a href='kisiler/tuncer-guvensoy.html'>Profili aç</a>`);
-    
-    L.marker([40.60123, 43.09201]).addTo(map)
-      .bindPopup(`<strong>Buzhane Sokak</strong><br/><a href='kisiler/buzhane-sokak.html'>Profili aç</a>`);
+        if (okType && okSearch) {
+          if (!map.hasLayer(obj.marker)) obj.marker.addTo(map);
+        } else {
+          if (map.hasLayer(obj.marker)) map.removeLayer(obj.marker);
+        }
+      });
+    }
 
-    L.marker([40.61133, 43.10186]).addTo(map)
-      .bindPopup(`<strong>Kurban Ali Çelik Caddesi</strong><br/><a href='kisiler/kurban-ali-celik.html'>Profili aç</a>`);
+    // Search
+    const searchEl = document.getElementById("search");
+    searchEl.addEventListener("input", (e) => {
+      query = normalizeTR(e.target.value.trim());
+      applyFilters();
+    });
 
-    L.marker([40.60654, 43.09409]).addTo(map)
-      .bindPopup(`<strong>Selahattin Filtekin Caddesi</strong><br/><a href='kisiler/selahattin-filtekin.html'>Profili aç</a>`);
+    // Filter buttons
+    const filterBtns = document.querySelectorAll("#filters .filter");
+    document.getElementById("filters").addEventListener("click", (e) => {
+      const btn = e.target.closest("button.filter");
+      if (!btn) return;
 
-    L.marker([40.60037, 43.09129]).addTo(map)
-      .bindPopup(`<strong>Neşe Doster Sokak</strong><br/><a href='kisiler/nese-doster.html'>Profili aç</a>`);
+      activeType = (btn.dataset.type || "all").toLowerCase();
 
-    
-    L.marker([40.59959, 43.09199]).addTo(map)
-      .bindPopup(`<strong>Vasfiye Eriş Sokak</strong><br/><a href='kisiler/vasfiye-eris.html'>Profili aç</a>`);
-    
-    L.marker([40.60706, 43.08934]).addTo(map)
-      .bindPopup(`<strong>Şehit Hulisi Aytekin Caddesi</strong><br/><a href='kisiler/sehit-hulisi-aytekin.html'>Profili aç</a>`);
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    L.marker([40.59926, 43.09253]).addTo(map)
-      .bindPopup(`<strong>Şehit Polis Sadullah Keleş Sokak</strong><br/><a href='kisiler/sehit-polis-sadullah-keles.html'>Profili aç</a>`);
+      applyFilters();
+    });
 
-    L.marker([40.60172, 43.11292]).addTo(map)
-      .bindPopup(`<strong>Şehit Polis Bülent Aktaş Sokak</strong><br/><a href='kisiler/sehit-polis-bulent-aktas.html'>Profili aç</a>`);
-
-
-    L.marker([40.59684, 43.09295]).addTo(map)
-      .bindPopup(`<strong>Şehit Er Emin Polat</strong><br/><a href='kisiler/sehit-er-emin-polat.html'>Profili aç</a>`);
-
-    L.marker([40.59841, 43.08796]).addTo(map)
-      .bindPopup(`<strong>Şehit Polis Tayfun Çele Sokak</strong><br/><a href='kisiler/sehit-polis-tayful-cele.html'>Profili aç</a>`);
-
-    L.marker([40.59913, 43.08716]).addTo(map)
-      .bindPopup(`<strong>Süleyman Sokak</strong><br/><a href='kisiler/suleyman-sokak.html'>Profili aç</a>`);
-
-
-    L.marker([40.60266, 43.10158]).addTo(map)
-      .bindPopup(`<strong>Necati Bey Sokak</strong><br/><a href='kisiler/necati-bey-sokak.html'>Profili aç</a>`);
-
-    L.marker([40.60067, 43.09085]).addTo(map)
-      .bindPopup(`<strong>Resul Yıldız Caddesi</strong><br/><a href='kisiler/resul-yildiz-caddesi.html'>Profili aç</a>`);
-
-    L.marker([40.60398, 43.09447]).addTo(map)
-      .bindPopup(`<strong>Haydar Aliyev Caddesi</strong><br/><a href='kisiler/haydar-aliyev.html'>Profili aç</a>`);
-
-    L.marker([40.61133, 43.10186]).addTo(map)
-      .bindPopup(`<strong>Kurban Ali Çelik Caddesi</strong><br/><a href='kisiler/kurban-ali-celik.html'>Profili aç</a>`);
-
-
-
+    // initial
+    applyFilters();
   </script>
+  <script>
+  function getTypeFromText(text){
+    const t = normalizeTR(text);
+    if (t.includes("bulvari")) return "bulvar";
+    if (t.includes("caddesi") || t.includes("cadde")) return "cadde";
+    if (t.includes("sokak") || t.includes("sokagi") || t.includes("sokağı")) return "sokak";
+    return "other";
+  }
 
+  function updateCounts(){
+    const visibleCards = Array.from(document.querySelectorAll('#peopleGrid .card'))
+      .filter(c => c.style.display !== "none");
 
+    let cadde=0, sokak=0, bulvar=0;
+    visibleCards.forEach(card => {
+      const type = getTypeFromText(card.innerText);
+      if (type==="cadde") cadde++;
+      if (type==="sokak") sokak++;
+      if (type==="bulvar") bulvar++;
+    });
+
+    document.getElementById("count-all").textContent = visibleCards.length;
+    document.getElementById("count-cadde").textContent = cadde;
+    document.getElementById("count-sokak").textContent = sokak;
+    document.getElementById("count-bulvar").textContent = bulvar;
+  }
+
+  // ilk yüklemede
+  updateCounts();
+
+  // arama sonrası da güncelle
+  search.addEventListener('input', () => {
+    updateCounts();
+  });
+
+  // filtreye basınca da güncelle (senin filtre kodunun sonunda çağır)
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTimeout(updateCounts, 0);
+    });
+  });
+  </script>
 
 </body>
 </html>
