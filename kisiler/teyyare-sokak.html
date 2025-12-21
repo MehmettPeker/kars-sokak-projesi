@@ -1,51 +1,116 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ali Rıza Bey</title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Teyyare Sokak</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header"><h1>Teyyare Sokak</h1></div>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Teyyare Sokak</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Kent tarihi • Havacılık hafızası</p>
+    </div>
+
     <div class="card profile">
-      <img src="../assets/img/ali-riza-bey.jpg" alt="Ali Rıza Bey"/>
+      <!-- SOL -->
+      <aside class="archive">
+        <img
+          src="../assets/img/ali-riza-bey.jpg"
+          alt="Teyyare Sokak"
+          class="profile-resim"
+        />
+        <div class="caption">
+          <span class="badge">Arşiv</span>
+          <span>Kars</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ -->
       <div>
-        <section id="teyyare-sokak" class="street-section">
-            <h2>TEYYARE SOKAK</h2>
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
 
-            <h3>Türkçe</h3>
+          <div class="kv">
+            <strong>Konu</strong><span>Teyyare Meydanı (eski havaalanı) hatırası</span>
+            <strong>Dönem</strong><span>Yaklaşık 1910–1912 (geç Osmanlı dönemi)</span>
+            <strong>Anlam</strong><span>Kentin erken havacılık geçmişine atıf</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Kent hafızası</span>
+            <span class="badge">Tarih</span>
+            <span class="badge">Havacılık</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" id="tab-en">English</button>
+          </div>
+
+          <!-- TÜRKÇE -->
+          <section id="panel-tr" class="tab-panel street-section">
+            <h2>Teyyare Sokak Nedir?</h2>
+
             <p>
-                Kars’taki Teyyare Sokak adını, kentin geçmişinde yer alan “Teyyare Meydanı” adlı eski havaalanından almıştır.
-                Osmanlı’nın son döneminde, yaklaşık 1910–1912 yılları arasında Kars’ta Ruslar tarafından bir tayyare (uçak)
-                meydanı yapılmış ve uzun süre askeri amaçlarla kullanılmıştır.
-            </p>
-            <p>
-                Zamanla bu alanın çevresi yerleşim bölgesine dönüşmüş; meydanın adı ise halk arasında “Teyyare” olarak yaşamaya
-                devam etmiştir. Günümüzde Kars şehir merkezinde yer alan Teyyare Sokak ve Teyyare Meydanı Sokak adları, bu tarihi
-                havaalanının hatırasını taşımaktadır.
-            </p>
-            <p>
-                Sokak isminin, şehrin havacılık geçmişine ve bu meydanın kente kattığı tarihsel öneme yapılan bir atıf olduğu
-                anlaşılmaktadır.
+              Kars’taki Teyyare Sokak adını, kentin geçmişinde yer alan “Teyyare Meydanı” adlı eski
+              havaalanından almıştır. Osmanlı’nın son döneminde, yaklaşık 1910–1912 yılları arasında
+              Kars’ta Ruslar tarafından bir tayyare (uçak) meydanı yapılmış ve uzun süre askerî amaçlarla
+              kullanılmıştır.
             </p>
 
-            <h3>English</h3>
             <p>
-                The name Teyyare Street in Kars originates from the city's historic “Teyyare Square,” which once served as an early
-                airfield. Around 1910–1912, during the late Ottoman period, the Russians built an airfield in Kars that was used for
-                military purposes for many years.
+              Zamanla bu alanın çevresi yerleşim bölgesine dönüşmüş; meydanın adı ise halk arasında
+              “Teyyare” olarak yaşamaya devam etmiştir. Günümüzde Kars şehir merkezinde yer alan
+              Teyyare Sokak ve Teyyare Meydanı Sokak adları, bu tarihî havaalanının hatırasını
+              taşımaktadır.
             </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden “Teyyare” adı?</p>
+              <p>
+                Sokak ismi, şehrin havacılık geçmişine ve bu meydanın kente kattığı tarihsel öneme
+                yapılan bir atıf olarak değerlendirilebilir.
+              </p>
+            </div>
+          </section>
+
+          <!-- ENGLISH -->
+          <section id="panel-en" class="tab-panel street-section" hidden>
+            <h2>What is Teyyare Street?</h2>
+
             <p>
-                Over time, the surrounding area developed into a residential neighborhood, and the name “Teyyare” (meaning “airplane”
-                in Ottoman Turkish) remained in local use. Today, Teyyare Street and Teyyare Square Street in central Kars preserve
-                the memory of this historic aviation site.
+              The name “Teyyare Street” in Kars originates from the city’s historic “Teyyare Square,”
+              which once served as an early airfield. Around 1910–1912, during the late Ottoman period,
+              the Russians built an airfield in Kars, and it was used for military purposes for many years.
             </p>
+
             <p>
-                The street name thus reflects the city's early connection to aviation and the historical significance of the old airfield.
+              Over time, the surrounding area developed into a residential neighborhood, and the name
+              “Teyyare” (meaning “airplane” in Ottoman Turkish) remained in local use. Today, Teyyare
+              Street and Teyyare Square Street in central Kars preserve the memory of this historic
+              aviation site.
             </p>
-        </section>
+
+            <div class="callout">
+              <p class="callout-title">Why the name “Teyyare”?</p>
+              <p>
+                The street name reflects the city’s early connection to aviation and the historical
+                significance of the former airfield.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
-          <img src="../assets/qr/teyyare_sokak_qr.png" alt="QR - Ali Rıza Bey"/>
+          <img src="../assets/qr/teyyare_sokak_qr.png" alt="QR - Teyyare Sokak"/>
           <div>
             <h3>QR ile hızlı erişim</h3>
             <p>Bu QR kodu tarayan ziyaretçiler bu sayfaya doğrudan ulaşır.</p>
@@ -54,6 +119,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer">Kars Kültürel Sokak Projesi • Teyyare Sokak</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

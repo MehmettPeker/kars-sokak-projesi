@@ -1,39 +1,100 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alparslan Türkeş</title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alparslan Türkeş</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header"><h1>Alparslan Türkeş</h1></div>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Alparslan Türkeş Bulvarı</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Kişi/Sokak Profili</p>
+    </div>
 
     <div class="card profile">
-      <img src="../assets/img/alparslan-turkes.jpg" alt="Alparslan Türkeş"/>
+      <!-- SOL: Arşiv görsel kartı -->
+      <aside class="archive">
+        <img src="../assets/img/alpaslan-turkes.png" alt="Alparslan Türkeş" class="profile-resim"/>
+        <div class="caption">
+          <span class="badge">Arşiv görseli</span>
+          <span>Kaynak: illüstrasyon</span>
+        </div>
+      </aside>
 
+      <!-- SAĞ: İçerik -->
       <div>
-        <section id="alparslan-turkes" class="street-section">
-          <h2>ALPARSLAN TÜRKEŞ BULVARI</h2>
-          <br>
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
 
-          <h3>Türkçe</h3>
-          <p>Alparslan Türkeş, Türk siyaseti ve milliyetçi hareket üzerinde derin etkiler bırakmış bir liderdir. 1969’da kurduğu Milliyetçi Hareket Partisi (MHP) ile Türk milliyetçiliğini sistemli bir siyasi harekete dönüştürmüştür. Türkeş’in geliştirdiği “Dokuz Işık” doktrini, devlet yönetimi, toplum ve ekonomi alanlarında milliyetçi idealleri birleştiren bir felsefi çerçeve sunar. Siyasi yaşamında, özellikle 1970’ler ve 1980’ler boyunca Türk milliyetçiliğinin şekillenmesinde aktif rol oynamış; gençlik ve toplum üzerinde etkili bir figür olmuştur. Askerlik kökeni, disiplinli ve örgütlü yapısına katkı sağlamış, partinin ideolojik ve stratejik çizgisini belirlemiştir. Türkeş, 1997’de vefat etmiş olsa da, Türkiye’de milliyetçi siyasi hareketin kurucu ve simge isimlerinden biri olarak hatırlanmaktadır.</p>
+          <div class="kv">
+            <strong>Alan</strong><span>Siyaset • Milliyetçi hareket</span>
+            <strong>Öne çıkan</strong><span>“Dokuz Işık” doktrini</span>
+            <strong>Bilgi</strong><span>1969’da MHP’nin kuruluşu ile anılır</span>
+          </div>
 
-          <h3>English</h3>
-          <p>Alparslan Türkeş was a prominent leader who left a lasting impact on Turkish politics and the nationalist movement. By founding the Nationalist Movement Party (MHP) in 1969, he transformed Turkish nationalism into a structured political movement. Türkeş developed the “Nine Lights” doctrine, providing a philosophical framework that integrates nationalist ideals across governance, society, and economics. Throughout the 1970s and 1980s, he played an active role in shaping Turkish nationalism, influencing youth and society at large. His military background contributed to his disciplined and organized leadership, guiding the party’s ideological and strategic direction. Although he passed away in 1997, Türkeş remains remembered as a foundational and symbolic figure of Turkey’s nationalist political movement.</p>
-        </section>
+          <div class="meta">
+            <span class="badge">Biyografi</span>
+            <span class="badge">Kavramlar</span>
+            <span class="badge">Dönem</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" aria-controls="panel-tr" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="panel-en" id="tab-en">English</button>
+          </div>
+
+          <section id="panel-tr" class="tab-panel street-section" role="tabpanel" aria-labelledby="tab-tr">
+            <h2>Alparslan Türkeş Kimdir?</h2>
+            <p>
+              Alparslan Türkeş, Türk siyaseti ve milliyetçi hareket üzerinde derin etkiler bırakmış bir liderdir.
+              1969’da kurduğu Milliyetçi Hareket Partisi (MHP) ile Türk milliyetçiliğini sistemli bir siyasi
+              harekete dönüştürmüştür. Türkeş’in geliştirdiği “Dokuz Işık” doktrini, devlet yönetimi, toplum ve
+              ekonomi alanlarında milliyetçi idealleri birleştiren bir felsefi çerçeve sunar. Siyasi yaşamında,
+              özellikle 1970’ler ve 1980’ler boyunca Türk milliyetçiliğinin şekillenmesinde aktif rol oynamış;
+              gençlik ve toplum üzerinde etkili bir figür olmuştur. Askerlik kökeni, disiplinli ve örgütlü yapısına
+              katkı sağlamış, partinin ideolojik ve stratejik çizgisini belirlemiştir. Türkeş, 1997’de vefat etmiş
+              olsa da, Türkiye’de milliyetçi siyasi hareketin kurucu ve simge isimlerinden biri olarak
+              hatırlanmaktadır.
+            </p>
+          </section>
+
+          <section id="panel-en" class="tab-panel street-section" role="tabpanel" aria-labelledby="tab-en" hidden>
+            <h2>Who was Alparslan Türkeş?</h2>
+            <p>
+              Alparslan Türkeş was a prominent leader who left a lasting impact on Turkish politics and the
+              nationalist movement. By founding the Nationalist Movement Party (MHP) in 1969, he transformed
+              Turkish nationalism into a structured political movement. Türkeş developed the “Nine Lights”
+              doctrine, providing a philosophical framework that integrates nationalist ideals across governance,
+              society, and economics. Throughout the 1970s and 1980s, he played an active role in shaping
+              Turkish nationalism, influencing youth and society at large. His military background contributed to
+              his disciplined and organized leadership, guiding the party’s ideological and strategic direction.
+              Although he passed away in 1997, Türkeş remains remembered as a foundational and symbolic
+              figure of Turkey’s nationalist political movement.
+            </p>
+          </section>
+        </div>
 
         <div class="qr">
-          <img src="../assets/qr/alparslan_turkes_qr.png" alt="QR - Alparslan Türkeş"/>
+          <img src="../assets/qr/alparslan-turkes-qr.png" alt="QR - Alparslan Türkeş"/>
           <div>
             <h3>QR ile hızlı erişim</h3>
             <p>Bu QR kodu tarayan ziyaretçiler bu sayfaya doğrudan ulaşır.</p>
             <a class="btn" href="../index.html">← Haritaya dön</a>
           </div>
         </div>
+
       </div>
     </div>
 
     <div class="footer">Kars Kültürel Sokak Projesi • Alparslan Türkeş</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

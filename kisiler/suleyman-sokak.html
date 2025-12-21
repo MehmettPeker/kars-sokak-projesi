@@ -1,48 +1,124 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title></title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Süleyman Sokak</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
-<body>
-  <div class="container">
-    <div class="header"><h1>Süleyman Sokak</h1></div>
-    <div class="card profile">
-      <img src="../assets/img/suleyman-sokak.jpg" alt="Süleyman Sokak"/>
-      <div>
-        <section id="suleyman-sokak" class="street-section">
-    <h2>Süleyman Sokak</h2>
-        <br>
-    <h3>Türkçe</h3>
-    
-    <p>
-      Süleyman Sokak adı, genellikle resmi bir kişiden ziyade, o bölgenin yerel halkından tanınan bir kişiden veya eski bir mülk sahibinden kaynaklanır.
-    </p>
-    <p>
-      Bu tip basit kişi adları, genellikle tarihi önemi büyük olaylarla veya ulusal kahramanlarla ilgili değildir; daha çok yerel hafızayı temsil eder.
-    </p>
-    
-    <h3>English</h3>
-    <p>
-      The name Süleyman Street usually originates not from an official figure, but from a person known in the local community or a former property owner in the area.
-    </p>
-    <p>
-      These types of simple personal names are generally not related to historically significant events or national heroes; they mostly represent local memory.
-    </p>
-    
-    
-</section>
 
+<body>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Süleyman Sokak</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Yerel hafıza</p>
+    </div>
+
+    <div class="card profile">
+
+      <!-- SOL: Arşiv kartı -->
+      <aside class="archive">
+        <img
+          src="../assets/img/suleyman-sokak.jpg"
+          alt="Süleyman Sokak"
+          class="profile-resim"
+          loading="lazy"
+        />
+        <div class="caption">
+          <span class="badge">Arşiv</span>
+          <span>Kars</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ: İçerik -->
+      <div>
+
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Tür</strong><span>Sokak adı</span>
+            <strong>İçerik</strong><span>Yerel hafıza • Mahalle kültürü</span>
+            <strong>Not</strong><span>Ulusal figürden ziyade yerel bir isim olabilir</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Yerel</span>
+            <span class="badge">Mahalle</span>
+            <span class="badge">Bellek</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" aria-controls="panel-tr" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="panel-en" id="tab-en">English</button>
+          </div>
+
+          <!-- TÜRKÇE -->
+          <section id="panel-tr" class="tab-panel street-section" role="tabpanel" aria-labelledby="tab-tr">
+            <h2>Süleyman Sokak</h2>
+
+            <p>
+              Süleyman Sokak adı, genellikle resmi bir devlet adamından ziyade,
+              o bölgede yaşamış veya mahalle halkı tarafından tanınan bir kişiden gelmektedir.
+            </p>
+            <p>
+              Bu tür sokak adları büyük tarihsel olaylardan çok, yerel belleği ve günlük yaşam kültürünü
+              yansıtır. Şehir hafızasının korunmasında önemli bir rol oynar.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden “Süleyman” adı?</p>
+              <p>
+                Bu tür isimler çoğu zaman mahallede tanınan bir kişi, eski bir mülk sahibi veya
+                yerel bir hatıra ile ilişkilidir. Kesin bilgi varsa belediye/yerel arşiv kaydı ile
+                netleştirilebilir.
+              </p>
+            </div>
+          </section>
+
+          <!-- ENGLISH -->
+          <section id="panel-en" class="tab-panel street-section" role="tabpanel" aria-labelledby="tab-en" hidden>
+            <h2>Süleyman Street</h2>
+
+            <p>
+              The name Süleyman Street usually comes from a person known within the local community
+              rather than a nationally recognized historical figure.
+            </p>
+            <p>
+              Such street names reflect neighborhood culture and local memory rather than major
+              historical events or national heroes.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Why the name “Süleyman”?</p>
+              <p>
+                In many cases, these names are linked to a locally known person, a former property owner,
+                or a community memory. If needed, municipal or local archive records can clarify it.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
-          <img src="../assets/qr/suleyman-sokak.png" alt="QR - Süleyman Sokak"/>
+          <img src="../assets/qr/suleyman-sokak.png" alt="QR - Süleyman Sokak" loading="lazy"/>
           <div>
             <h3>QR ile hızlı erişim</h3>
             <p>Bu QR kodu tarayan ziyaretçiler bu sayfaya doğrudan ulaşır.</p>
             <a class="btn" href="../index.html">← Haritaya dön</a>
           </div>
         </div>
+
       </div>
     </div>
+
     <div class="footer">Kars Kültürel Sokak Projesi • Süleyman Sokak</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

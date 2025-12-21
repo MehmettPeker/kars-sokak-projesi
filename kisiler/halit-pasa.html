@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Halit Paşa</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Halit Paşa Caddesi</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Kişi Profili</p>
+    </div>
+
+    <div class="card profile">
+      <!-- SOL: Görsel -->
+      <aside class="archive">
+        <img src="../assets/img/halit-pasa.jpg" alt="Halit Paşa" class="profile-resim"/>
+        <div class="caption">
+          <span class="badge">Arşiv</span>
+          <span>Askerî tarih</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ: İçerik -->
+      <div>
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Alan</strong><span>Askerî tarih • Siyaset</span>
+            <strong>Lakabı</strong><span>“Deli Halit Paşa”</span>
+            <strong>Öne çıkan</strong><span>Kars’ın 1919’da geri alınması</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Osmanlı</span>
+            <span class="badge">Cumhuriyet</span>
+            <span class="badge">Kars</span>
+          </div>
+        </div>
+
+        <!-- Sekmeler -->
+        <div class="tabs">
+          <div class="tab-buttons" role="tablist">
+            <button type="button" role="tab" aria-selected="true" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" id="tab-en">English</button>
+          </div>
+
+          <!-- TR -->
+          <section class="tab-panel street-section" id="panel-tr">
+            <h2>Halit Paşa Kimdir?</h2>
+
+            <p>
+              Halit Paşa, tam adıyla Halit Karsıalan, 1883 yılında İstanbul’da doğmuş; Osmanlı ve Cumhuriyet
+              dönemlerinin önemli askerî komutanlarından biri olarak tanınmıştır. Cephelerde gösterdiği
+              olağanüstü cesaret nedeniyle “Deli Halit Paşa” lakabıyla anılmıştır.
+            </p>
+
+            <p>
+              1903 yılında Harp Okulu’ndan teğmen olarak mezun olmuş; Birinci Dünya Savaşı sırasında Kafkas
+              ve Doğu Anadolu cephelerinde görev yapmıştır. Özellikle 1919 yılında Kars’ın yeniden
+              Türk hâkimiyetine alınmasında kritik bir rol üstlenmiştir.
+            </p>
+
+            <p>
+              Cumhuriyet döneminde de aktif görev almış, 1923 yılında Ardahan milletvekili olarak Türkiye
+              Büyük Millet Meclisi’ne girmiştir. Ancak 14 Şubat 1925’te meclis binasında uğradığı suikast
+              sonucu hayatını kaybetmiştir.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden bu isim verildi?</p>
+              <p>
+                Halit Paşa’nın adı, Kars’ın savunulması ve 1919’daki askerî başarıları nedeniyle şehirde bir
+                caddeye verilmiştir. Bu adlandırma, onun cesaretinin ve Kars tarihindeki yerinin bir
+                hatırası olarak yaşatılmaktadır.
+              </p>
+            </div>
+          </section>
+
+          <!-- EN -->
+          <section class="tab-panel street-section" id="panel-en" hidden>
+            <h2>Who was Halit Pasha?</h2>
+
+            <p>
+              Halit Pasha, whose full name was Halit Karsıalan, was born in 1883 in Istanbul and became one
+              of the prominent military commanders of the late Ottoman and early Republican periods.
+              He earned the nickname “Deli Halit Pasha” due to his exceptional bravery on the battlefield.
+            </p>
+
+            <p>
+              After graduating from the Military Academy as a lieutenant in 1903, he served on the Caucasus
+              and Eastern Anatolia fronts during World War I. He played a key role in the recapture of Kars
+              in 1919.
+            </p>
+
+            <p>
+              In the Republican era, he was elected as a member of the Turkish Grand National Assembly
+              representing Ardahan in 1923. He was assassinated in the parliament building on
+              February 14, 1925.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Reason for the name</p>
+              <p>
+                A street in Kars was named after Halit Pasha to honor his military achievements and his
+                significant role in the defense and liberation of the city.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
+        <div class="qr">
+          <img src="../assets/qr/halit-pasa.png" alt="QR - Halit Paşa"/>
+          <div>
+            <h3>QR ile hızlı erişim</h3>
+            <p>Bu QR kodu tarayan ziyaretçiler bu sayfaya doğrudan ulaşır.</p>
+            <a class="btn" href="../index.html">← Haritaya dön</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Kars Kültürel Sokak Projesi • Halit Paşa</div>
+  </div>
+
+  <script src="profile.js"></script>
+  <script>
+  const tabTr = document.getElementById("tab-tr");
+  const tabEn = document.getElementById("tab-en");
+  const panelTr = document.getElementById("panel-tr");
+  const panelEn = document.getElementById("panel-en");
+
+  if (tabTr && tabEn && panelTr && panelEn) {
+    tabTr.addEventListener("click", () => {
+      tabTr.setAttribute("aria-selected", "true");
+      tabEn.setAttribute("aria-selected", "false");
+      panelTr.hidden = false;
+      panelEn.hidden = true;
+    });
+
+    tabEn.addEventListener("click", () => {
+      tabTr.setAttribute("aria-selected", "false");
+      tabEn.setAttribute("aria-selected", "true");
+      panelTr.hidden = true;
+      panelEn.hidden = false;
+    });
+  }
+</script>
+
+</body>
+</html>

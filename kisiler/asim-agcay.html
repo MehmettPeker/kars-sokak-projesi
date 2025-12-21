@@ -1,16 +1,91 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Asım Ağçay</title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Asım Ağçay</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header"><h1>Asım Ağçay</h1></div>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Şehit Er Asım Ağçay Sokağı</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Kişi/Sokak Profili</p>
+    </div>
+
     <div class="card profile">
-      <img src="../assets/img/asim-agcay.jpg" alt="Asım Ağçay"/>
+      <!-- SOL: Arşiv görsel kartı -->
+      <aside class="archive">
+        <img src="../assets/img/asim-agcay.jpg" alt="Şehit Er Asım Ağçay" class="profile-resim"/>
+        <div class="caption">
+          <span class="badge">Arşiv görseli</span>
+          <span>Kaynak: yerel arşiv</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ -->
       <div>
-        <p>Kars’ta topluma ve eğitime yaptığı katkılarla anılan bir hayırseverdir.</p>
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Alan</strong><span>Şehitlik • Anma</span>
+            <strong>Bilgi</strong><span>Kamuya açık kaynaklarda detaylar sınırlıdır</span>
+            <strong>Neden?</strong><span>Kars’ta hatırayı yaşatmak ve minneti göstermek</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Anma</span>
+            <span class="badge">Yerel tarih</span>
+            <span class="badge">Kars</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" aria-controls="panel-tr" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="panel-en" id="tab-en">English</button>
+          </div>
+
+          <section id="panel-tr" class="tab-panel street-section" role="tabpanel" aria-labelledby="tab-tr">
+            <h2>Şehit Er Asım Ağçay</h2>
+            <p>
+              Şehit Er Asım Ağçay’ın tam olarak nerede ve ne zaman şehit olduğuna dair ayrıntılı bilgiler,
+              kamuya açık kaynaklarda net olarak yer almamaktadır.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden bu isim verildi?</p>
+              <p>
+                Şehit Er Asım Ağçay'ın adının Kars'taki Fevzi Çakmak Mahallesi'nde bir sokağa verilmesi,
+                onun fedakârlığını onurlandırmak ve Kars halkının şehitlerine olan minnet ve saygısını
+                göstermek amacıyla yapılmıştır.
+              </p>
+            </div>
+          </section>
+
+          <section id="panel-en" class="tab-panel street-section" role="tabpanel" aria-labelledby="tab-en" hidden>
+            <h2>Martyr Private Asım Ağçay</h2>
+            <p>
+              Detailed information about exactly where and when Martyr Private Asım Ağçay was martyred is
+              not clearly available in publicly accessible sources.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Reason for the name</p>
+              <p>
+                Naming a street after Martyr Private Asım Ağçay in the Fevzi Çakmak Neighborhood of Kars was
+                done to honor his sacrifice and to demonstrate the gratitude and respect of the people of Kars
+                for their martyrs.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
           <img src="../assets/qr/asim-agcay.png" alt="QR - Asım Ağçay"/>
           <div>
@@ -19,8 +94,13 @@
             <a class="btn" href="../index.html">← Haritaya dön</a>
           </div>
         </div>
+
       </div>
     </div>
+
     <div class="footer">Kars Kültürel Sokak Projesi • Asım Ağçay</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

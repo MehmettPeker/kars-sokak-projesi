@@ -1,34 +1,95 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title></title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Necati Bey Sokak</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
-<body>
-  <div class="container">
-    <div class="header"><h1>Necati Bey Sokak</h1></div>
-    <div class="card profile">
-      <img src="../assets/img/necati-bey.jpg" alt="Necati Bey Sokak"/>
-      <div>
-        <section id="necati-bey-sokak" class="street-section">
-    <h2>Necati Bey Sokak</h2>
-        <br>
-    <h3>Türkçe</h3>
-    
-    <p>
-      Necati Bey Sokak, bir ulusal kahraman olmaktan ziyade, Kars'ın yerel tarihi veya toplumsal hayatı içinde önemli bir iz bırakmış Necati Bey adlı bir kişiden ismini almıştır.
-    </p>
-    
-    
-    <h3>English</h3>
-    <p>
-      Necati Bey Street takes its name from a person named Necati Bey, who left an important mark in Kars’s local history or social life, rather than being a national hero.
-    </p>
-    
-    
-    
-</section>
 
+<body>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Necati Bey Sokak</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Yerel Hafıza</p>
+    </div>
+
+    <div class="card profile">
+      <!-- SOL -->
+      <aside class="archive">
+        <img src="../assets/img/necati-bey.jpg" alt="Necati Bey" class="profile-resim"/>
+        <div class="caption">
+          <span class="badge">Yerel</span>
+          <span>Sokak adı</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ -->
+      <div>
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Tür</strong><span>Sokak adı</span>
+            <strong>Bağlam</strong><span>Kars yerel tarihi • Toplumsal hayat</span>
+            <strong>Not</strong><span>Ulusal kahraman değil, yerel iz bırakan bir isim</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Yerel tarih</span>
+            <span class="badge">Kent hafızası</span>
+            <span class="badge">Toplumsal iz</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" id="tab-en">English</button>
+          </div>
+
+          <!-- TR -->
+          <section id="panel-tr" class="tab-panel street-section" hidden="false">
+            <h2>Necati Bey Sokak</h2>
+            <p>
+              Necati Bey Sokak, bir ulusal kahraman olmaktan ziyade, Kars’ın yerel tarihi
+              veya toplumsal hayatı içinde önemli bir iz bırakmış “Necati Bey” adlı bir
+              kişiden ismini almıştır.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden bu isim verildi?</p>
+              <p>
+                Yerel hafızada iz bırakan kişilerin adlarının sokaklara verilmesi, kentin
+                kültürel sürekliliğini ve hatırlama biçimini güçlendiren bir yaklaşımdır.
+                Bu sokak adı da Kars’ın yerel tarihindeki bir ismi yaşatmayı amaçlar.
+              </p>
+            </div>
+          </section>
+
+          <!-- EN -->
+          <section id="panel-en" class="tab-panel street-section" >
+            <h2>Necati Bey Street</h2>
+            <p>
+              Necati Bey Street takes its name from a person named Necati Bey, who left an
+              important mark in Kars’s local history or social life, rather than being a
+              national hero.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Reason for the name</p>
+              <p>
+                Naming streets after locally significant figures helps preserve urban memory
+                and strengthens cultural continuity. This street name reflects the intention
+                to keep a local legacy alive in Kars.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
           <img src="../assets/qr/necati-bey.png" alt="QR - Necati Bey"/>
           <div>
@@ -37,8 +98,13 @@
             <a class="btn" href="../index.html">← Haritaya dön</a>
           </div>
         </div>
+
       </div>
     </div>
+
     <div class="footer">Kars Kültürel Sokak Projesi • Necati Bey Sokak</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

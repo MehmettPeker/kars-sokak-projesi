@@ -1,16 +1,123 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Arif Taşçı</title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Arif Taşçı Caddesi</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header"><h1>Arif Taşçı</h1></div>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Arif Taşçı Caddesi</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Yerel yönetim</p>
+    </div>
+
     <div class="card profile">
-      <img src="../assets/img/arif-tasci.jpg" alt="Arif Taşçı"/>
+      <!-- SOL -->
+      <aside class="archive">
+        <img
+          src="../assets/img/arif-tasci.jpg"
+          alt="Arif Taşçı"
+          class="profile-resim"
+        />
+        <div class="caption">
+          <span class="badge">Arşiv</span>
+          <span>Kars Belediyesi</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ -->
       <div>
-        <p>Kars’ta eğitime ve kültürel hayata katkılarıyla bilinen yerel bir öncüdür.</p>
+        <!-- KISA ÖZET -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Görev</strong><span>Kars Belediye Başkanı</span>
+            <strong>Dönem</strong><span>1963–1970</span>
+            <strong>Öne çıkan</strong><span>Altyapı ve belediye hizmetleri</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Belediye</span>
+            <span class="badge">CHP</span>
+            <span class="badge">Kars</span>
+          </div>
+        </div>
+
+        <!-- DİL SEKME SİSTEMİ -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" id="tab-en">English</button>
+          </div>
+
+          <!-- TÜRKÇE -->
+          <section id="panel-tr" class="tab-panel street-section">
+            <h2>Arif Taşçı Kimdir?</h2>
+
+            <p>
+              Arif Taşçı, 1963 yılında yapılan yerel seçimlerde Cumhuriyet Halk Partisi (CHP)
+              adayı olarak Kars Belediye Başkanlığı’na seçilmiştir. 1963–1970 yılları arasında
+              görev yapmış; 1968 seçimlerinde yeniden kazanarak başkanlık görevini sürdürmüştür.
+            </p>
+
+            <p>
+              Görev süresi boyunca Kars’ın altyapı ve belediye hizmetlerinin geliştirilmesine
+              katkı sağlamış; özellikle yol, su, elektrik ve kanalizasyon gibi temel hizmetlerin
+              iyileştirilmesine öncülük etmiştir. Kars’ın modernleşme sürecinde önemli bir rol
+              oynamıştır.
+            </p>
+
+            <p>
+              Doğum ve ölüm tarihleri gibi kişisel bilgiler günümüze tam olarak ulaşmamış olsa da,
+              Kars belediyecilik tarihinde bıraktığı iz ve hizmetleriyle anılan bir isimdir.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden Arif Taşçı Caddesi?</p>
+              <p>
+                Arif Taşçı’nın Kars’a belediye başkanı olarak yaptığı hizmetleri ve kentin altyapısına
+                sağladığı katkılar nedeniyle adı bir caddeye verilerek yaşatılmıştır. Bu isimlendirme,
+                yerel yönetim tarihine duyulan saygının bir göstergesidir.
+              </p>
+            </div>
+          </section>
+
+          <!-- ENGLISH -->
+          <section id="panel-en" class="tab-panel street-section" hidden>
+            <h2>Who was Arif Taşçı?</h2>
+
+            <p>
+              Arif Taşçı was elected as the Mayor of Kars in the 1963 local elections as a candidate
+              of the Republican People’s Party (CHP). He served from 1963 to 1970 and was re-elected
+              in 1968, continuing his leadership of the city.
+            </p>
+
+            <p>
+              During his tenure, he contributed significantly to the development of municipal services,
+              particularly in roads, water supply, electricity, and sewage infrastructure, playing a key
+              role in the modernization of Kars.
+            </p>
+
+            <p>
+              Although detailed personal information such as his birth and death dates is not fully
+              documented, his contributions to local governance remain well remembered.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Why Arif Taşçı Street?</p>
+              <p>
+                The street was named after Arif Taşçı to honor his services as mayor and his contributions
+                to the city’s infrastructure and local administration.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
           <img src="../assets/qr/arif-tasci.png" alt="QR - Arif Taşçı"/>
           <div>
@@ -21,6 +128,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer">Kars Kültürel Sokak Projesi • Arif Taşçı</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

@@ -1,18 +1,126 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ali Rıza Bey</title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ali Rıza Bey Sokak</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header"><h1>Ali Rıza Bey</h1></div>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Ali Rıza Bey Sokak</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Kamu yönetimi</p>
+    </div>
+
     <div class="card profile">
-      <img src="../assets/img/ali-riza-bey.jpg" alt="Ali Rıza Bey"/>
+      <!-- SOL -->
+      <aside class="archive">
+        <img
+          src="../assets/img/ali-bey.jpg"
+          alt="Ali Rıza Bey"
+          class="profile-resim"
+        />
+        <div class="caption">
+          <span class="badge">Arşiv</span>
+          <span>Kamu</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ -->
       <div>
-        <p>Osmanlı döneminde Kars ve çevresinde görev yapmış adaletli bir idareci olarak bilinir.</p>
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Doğum</strong><span>~1870 • İbradı, Antalya</span>
+            <strong>Alan</strong><span>Osmanlı / Erken Cumhuriyet bürokrasisi</span>
+            <strong>Öne çıkan</strong><span>Kaymakamlık • Mutasarrıflık • Mülkiye müfettişliği</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Bürokrasi</span>
+            <span class="badge">Eğitim</span>
+            <span class="badge">Kars</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" id="tab-en">English</button>
+          </div>
+
+          <!-- TÜRKÇE -->
+          <section id="panel-tr" class="tab-panel street-section">
+            <h2>Ali Rıza Bey Kimdir?</h2>
+
+            <p>
+              Ali Rıza Bey, 1870 yılı civarında Antalya’nın İbradı ilçesinde doğmuş, 1958 yılında vefat etmiş
+              Osmanlı ve erken Cumhuriyet dönemi devlet görevlisidir. 1891 yılında Mülkiye Mektebi’nden mezun
+              olduktan sonra eğitim alanında görev yapmış; öğretmenlik ve okul müdürlüğü yaparak maarif
+              hizmetlerine katkıda bulunmuştur.
+            </p>
+            <p>
+              Daha sonra idari görevlere geçen Ali Rıza Bey; Bitlis, Mamuretü’l-Aziz (Elazığ) gibi illerde kaymakam,
+              Urfa’da ise mutasarrıf olarak görev yapmıştır. 1921 yılında Erzurum, Kars, Ardahan ve Bayezid
+              mıntıkalarında birinci sınıf mülkiye müfettişi olarak atanmış; bölgenin idari düzenlenmesinde önemli
+              rol oynamıştır.
+            </p>
+            <p>
+              1928 yılında valilik kadrosundan emekliye ayrılan Ali Rıza Bey, hem eğitimci kimliği hem de idari
+              tecrübesiyle Osmanlı’dan Cumhuriyet’e geçiş sürecinde öne çıkan bir bürokrattır.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden Ali Rıza Bey Sokak?</p>
+              <p>
+                Kars ve çevresinde görev yapmış olması, kentte bir sokağa adının verilmesini anlamlı kılar.
+                Devlet hizmetine adanmış yaşamı, Anadolu’nun modernleşme sürecine katkıda bulunan aydın
+                idarecilerin temsilcilerinden biri olmasını sağlamıştır.
+              </p>
+            </div>
+          </section>
+
+          <!-- ENGLISH -->
+          <section id="panel-en" class="tab-panel street-section" hidden>
+            <h2>Who was Ali Rıza Bey?</h2>
+
+            <p>
+              Ali Rıza Bey was an Ottoman and early Republican era statesman, born around 1870 in the İbradı
+              district of Antalya and passing away in 1958. After graduating from the Mülkiye School in 1891,
+              he began his career in education, serving as a teacher and school principal, contributing to the
+              development of public education.
+            </p>
+            <p>
+              He later transitioned into administrative duties, serving as district governor (kaymakam) in
+              provinces such as Bitlis and Mamuretü’l-Aziz (Elazığ), and as mutasarrıf (provincial governor) in
+              Urfa. In 1921, he was appointed as First-Class Civil Inspector for the regions of Erzurum, Kars,
+              Ardahan, and Bayezid, playing an important role in the administrative organization of Eastern
+              Anatolia.
+            </p>
+            <p>
+              Retiring from his position as governor in 1928, Ali Rıza Bey was remembered as a dedicated civil
+              servant who bridged the Ottoman and Republican periods with his dual identity as an educator and
+              administrator.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Why Ali Rıza Bey Street?</p>
+              <p>
+                His service in the Kars region provides meaningful context for naming a street after him, symbolizing
+                a life devoted to public duty and the modernization of Anatolia.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
-          <img src="../assets/qr/ali-riza-bey.png" alt="QR - Ali Rıza Bey"/>
+          <img src="../assets/qr/ali-bey.png" alt="QR - Ali Rıza Bey"/>
           <div>
             <h3>QR ile hızlı erişim</h3>
             <p>Bu QR kodu tarayan ziyaretçiler bu sayfaya doğrudan ulaşır.</p>
@@ -21,6 +129,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer">Kars Kültürel Sokak Projesi • Ali Rıza Bey</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>

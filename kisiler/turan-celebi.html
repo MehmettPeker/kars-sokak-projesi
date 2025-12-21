@@ -1,52 +1,117 @@
-<!doctype html><html lang="tr">
+<!doctype html>
+<html lang="tr">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turan ÇELEBİ</title>
-<link rel="stylesheet" href="../style.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Turan Çelebi Caddesi</title>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
-<body>
-  <div class="container">
-    <div class="header"><h1>Turan ÇELEBİ</h1></div>
-    <div class="card profile">
-      <img src="../assets/img/ahmet-arslan.jpg" alt="Ahmet Arslan"/>
-      <div>
-        <section id="ahmet-arslan-caddesi" class="street-section">
-    <h2>TURAN ÇELEBİ CADDESİ</h2>
-        <br>
-    <h3>Türkçe</h3>
-    <p>
-        Turan Çelebi,1971 yılında halk tarafından Kars Belediye Başkanlığı görevine layık görüldü.Bu görevi 1977 yılına kadar sürdürdü.Yaklaşık altı yıl süren bu görev süresi boyunca;şehrin altyapı,imar ve sosyal hizmetler gibi temel alanlarında çalışmalar yürütmüştür.Bu da onu Kars tarihindeki belediye başkanları arasında dikkat çekici kılmıştır.
-    </p>
-    <p>
-        Neden Turan ÇELEBİ Caddesi?
-    </p>
-    <p>
-        Caddeye Turan Çelebi adının verilmesinin amacı,Kars’a yaptığı hizmetleri unutmamak ve hatırasını yaşatmaktır.Bu sayede Turan Çelebi’nin yaptığı çalışmalar, yeni nesiller tarafından hatırlanır.
-    </p>
-    
-    <h3>English</h3>
-    <p>
-        Turan Çelebi was chosen by the people to serve as the Mayor of Kars in 1971 and held the position until 1977. During his six-year term, he worked on important areas like the city’s infrastructure, urban development, and social services. These efforts made him stand out among the mayors in Kars’s history.
-    </p>
-    <p>
-        Why Turan ÇELEBİ Street?
-    </p>
-    <p>
-        The purpose of naming the street after Turan Çelebi is to remember the services he provided to Kars and to keep his memory alive. In this way, Turan Çelebi’s work is remembered by future generations.
-    </p>
-    
-</section>
 
+<body>
+  <div class="container page-profile">
+    <div class="header">
+      <h1>Turan Çelebi Caddesi</h1>
+      <p class="subtitle">Kars Kültürel Sokak Projesi • Yerel yönetim</p>
+    </div>
+
+    <div class="card profile">
+      <!-- SOL -->
+      <aside class="archive">
+        <img
+          src="../assets/img/ahmet-arslan.jpg"
+          alt="Turan Çelebi"
+          class="profile-resim"
+        />
+        <div class="caption">
+          <span class="badge">Arşiv</span>
+          <span>Kars</span>
+        </div>
+      </aside>
+
+      <!-- SAĞ -->
+      <div>
+        <!-- Özet -->
+        <div class="summary">
+          <h2 style="margin:0">Kısa Özet</h2>
+
+          <div class="kv">
+            <strong>Görev</strong><span>Kars Belediye Başkanı</span>
+            <strong>Dönem</strong><span>1971–1977</span>
+            <strong>Öne çıkan</strong><span>Altyapı • İmar • Sosyal hizmetler</span>
+          </div>
+
+          <div class="meta">
+            <span class="badge">Belediye</span>
+            <span class="badge">Kent</span>
+            <span class="badge">Hizmet</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist" aria-label="Dil seçimi">
+            <button type="button" role="tab" aria-selected="true" id="tab-tr">Türkçe</button>
+            <button type="button" role="tab" aria-selected="false" id="tab-en">English</button>
+          </div>
+
+          <!-- TÜRKÇE -->
+          <section id="panel-tr" class="tab-panel street-section">
+            <h2>Turan Çelebi Kimdir?</h2>
+
+            <p>
+              Turan Çelebi, 1971 yılında halk tarafından Kars Belediye Başkanlığı görevine layık görülmüş,
+              bu görevi 1977 yılına kadar sürdürmüştür. Yaklaşık altı yıl süren bu görev süresi boyunca;
+              şehrin altyapı, imar ve sosyal hizmetler gibi temel alanlarında çalışmalar yürütmüştür.
+              Bu yönüyle Kars tarihindeki belediye başkanları arasında dikkat çeken isimlerden biri olmuştur.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Neden Turan Çelebi Caddesi?</p>
+              <p>
+                Caddeye Turan Çelebi adının verilmesinin amacı, Kars’a yaptığı hizmetleri unutmamak ve
+                hatırasını yaşatmaktır. Böylece Turan Çelebi’nin çalışmaları yeni nesiller tarafından da
+                hatırlanır.
+              </p>
+            </div>
+          </section>
+
+          <!-- ENGLISH -->
+          <section id="panel-en" class="tab-panel street-section" hidden>
+            <h2>Who was Turan Çelebi?</h2>
+
+            <p>
+              Turan Çelebi was chosen by the people to serve as the Mayor of Kars in 1971 and held the position
+              until 1977. During his six-year term, he worked on key areas such as the city’s infrastructure,
+              urban development, and social services. These efforts made him stand out among the mayors in
+              Kars’s local history.
+            </p>
+
+            <div class="callout">
+              <p class="callout-title">Why Turan Çelebi Street?</p>
+              <p>
+                The purpose of naming the street after Turan Çelebi is to remember the services he provided to
+                Kars and to keep his memory alive. In this way, his work is remembered by future generations.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR -->
         <div class="qr">
-          <img src="../assets/qr/turan-celebi.png" alt="QR - Turan ÇELEBİ"/>
+          <img src="../assets/qr/turan-celebi.png" alt="QR - Turan Çelebi"/>
           <div>
             <h3>QR ile hızlı erişim</h3>
             <p>Bu QR kodu tarayan ziyaretçiler bu sayfaya doğrudan ulaşır.</p>
             <a class="btn" href="../index.html">← Haritaya dön</a>
           </div>
         </div>
+
       </div>
     </div>
-    <div class="footer">Kars Kültürel Sokak Projesi • Ahmet Arslan</div>
+
+    <div class="footer">Kars Kültürel Sokak Projesi • Turan Çelebi</div>
   </div>
-</body></html>
+
+  <script src="profile.js"></script>
+</body>
+</html>
