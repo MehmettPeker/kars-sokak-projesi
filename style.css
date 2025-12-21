@@ -1,71 +1,309 @@
 /* Kars Theme (Ice blue + stone) */
 :root{
-  --bg:#eaf2f8; --card:#ffffff; --fg:#1f2937; --muted:#4b5563;
-  --primary:#1e3a8a; --accent:#d4a017; --border:#e5e7eb;
+  --bg:#eaf2f8;
+  --card:#ffffff;
+  --fg:#1f2937;
+  --muted:#4b5563;
+  --primary:#1e3a8a;
+  --accent:#d4a017;
+  --border:#e5e7eb;
 }
+
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+}
+
 .container{max-width:1024px;margin:0 auto;padding:20px}
-.header{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+
+.header{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:16px;
+  text-align:left;
+}
+/* Header typografi düzeltme (kabalığı azalt) */
+.header h1{
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #1f3f7a;
+  line-height: 1.15;
+}
+
+.header p{
+  max-width: 70ch;
+}
+
 h1,h2,h3{margin:0;color:var(--primary)}
-p{color:var(--muted);line-height:1.6}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(30,58,138,.08)}
+p{color:var(--muted);line-height:1.65;margin:10px 0}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(30,58,138,.08);
+}
+
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-a.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
+
+a.btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+}
 a.btn:hover{filter:brightness(.95)}
-.footer{margin-top:18px;color:var(--muted);font-size:.9rem}
-.profile{display:grid;grid-template-columns:160px 1fr;gap:16px}
-.profile img{width:160px;height:120px;object-fit:cover;border-radius:10px;background:#eef3fb;border:1px solid var(--border)}
-.qr{margin-top:16px;display:flex;gap:16px;align-items:center}
-.qr img{width:220px;height:220px;border-radius:6px;border:1px solid var(--border);background:white}
-/* Leaflet size */
-#map{height:460px;border-radius:16px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(17,24,39,.06);}
+
+.footer{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:.9rem;
+  text-align:center;
+  width:100%;
+}
+
+/* =========================
+   Leaflet Map
+   ========================= */
+#map{
+  height:460px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  box-shadow:0 10px 30px rgba(17,24,39,.06);
+}
 .leaflet-popup-content a{color:var(--primary);text-decoration:none}
 .leaflet-popup-content a:hover{text-decoration:underline}
-@media(max-width:720px){ .profile{grid-template-columns:1fr} .profile img{width:100%;height:180px} }
 
-/* Kişi / Sokak Profili Düzeni */
-.profile {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+/* =========================
+   Profile v2 (Modern + Arşiv)
+   ========================= */
+.profile{
+  display:grid;
+  grid-template-columns: 240px 1fr; /* daha sakin */
+  gap: 18px;
+  align-items:start;
 }
 
-.profile img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    background: #e9eef5;
+/* Arşiv görsel kartı */
+.archive{
+  background: linear-gradient(180deg, #fbf7ea 0%, #f3ead0 100%);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 12px 30px rgba(17,24,39,.10);
+  position: relative;
 }
 
-.qr-code {
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
-    background: #fff;
-    border-radius: 12px;
-    padding: 8px;
-    border: 1px solid #d5dce3;
+.archive::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: 18px;
+  pointer-events:none;
+  background-image: radial-gradient(rgba(0,0,0,.05) 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: .22;
 }
 
-/* Metin alanını düzenle */
-.street-section {
-    max-width: 600px;
-    margin-top: 16px;
+.profile .profile-resim{
+  width:100%;
+  height:auto;
+  max-height: 280px; /* resim daha az baskın */
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.10);
+  padding: 10px;
+  position: relative;
+  z-index: 1;
 }
 
-.street-section h2 {
-    margin-bottom: 8px;
+.archive .caption{
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  font-size: .85rem;
+  color: var(--muted);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
 }
 
-.street-section p {
-    line-height: 1.6;
-    margin-bottom: 12px;
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(30,58,138,.08);
+  color: var(--primary);
+  border: 1px solid rgba(30,58,138,.18);
+  font-size: .85rem;
+  font-weight: 600;
 }
-.footer {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
+
+/* Üst özet kartı */
+.summary{
+  display:grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+}
+
+.summary .meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.kv{
+  display:grid;
+  grid-template-columns: 100px 1fr; /* daha kompakt */
+  gap: 6px;
+  font-size: .95rem;
+}
+.kv strong{color: var(--fg)}
+.kv span{color: var(--muted)}
+
+/* Tabs */
+.tabs{margin-top: 12px;}
+
+.tab-buttons{
+  display:flex;
+  gap: 8px;
+  flex-wrap:wrap;
+}
+
+.tab-buttons button{
+  appearance:none;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 6px 10px;   /* daha küçük */
+  border-radius: 999px;
+  cursor:pointer;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.tab-buttons button[aria-selected="true"]{
+  border-color: rgba(30,58,138,.35);
+  background: rgba(30,58,138,.08);
+  color: var(--primary);
+  box-shadow: 0 8px 18px rgba(30,58,138,.12);
+}
+
+.tab-panel{
+  margin-top: 12px;
+  max-width: 68ch;
+}
+.tab-panel p{margin-top: 10px}
+
+/* Kişi metin alanı */
+.street-section{max-width: 68ch;}
+.street-section p{margin-bottom: 12px;}
+
+/* QR alanı */
+.qr{
+  margin-top: 18px;
+  display:flex;
+  gap:16px;
+  align-items:center;
+
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.70);
+}
+
+.qr img{
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.portrait{
+  width: 240px;
+  height: 320px;
+  background-image: url("../assets/img/arsiv-grid.png");
+  background-size: 400% 400%; /* 4 sütun x 4 satır gibi düşün */
+  background-repeat: no-repeat;
+}
+
+/* Her kişi sadece pozisyon */
+.alparslan-turkes{
+  background-position: 50% 0%;
+}
+.ismet-inonu{
+  background-position: 25% 0%;
+}
+.mustafa-kemal{
+  background-position: 0% 0%;
+}
+/* === Profile typography fix + callout === */
+.subtitle{
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.page-profile .street-section h2{
+  font-size: 1.25rem;
+  margin: 14px 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.page-profile .street-section h3{
+  font-size: 1rem;
+  margin: 14px 0 6px;
+  color: var(--primary);
+}
+
+.page-profile .street-section p{
+  margin: 10px 0;
+}
+
+.callout{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(30,58,138,.04);
+}
+
+.callout .callout-title{
+  margin: 0 0 6px;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.callout p{
+  margin: 0;
+}
+.btn.filter.active {
+  background:#222;
+  color:#fff;
+}
+
+
+/* Mobil */
+@media(max-width: 760px){
+  .profile{grid-template-columns:1fr;}
+  .archive{max-width: 360px;}
+  .qr{flex-direction:column; align-items:flex-start;}
+  .qr img{width:220px;height:220px;}
 }
