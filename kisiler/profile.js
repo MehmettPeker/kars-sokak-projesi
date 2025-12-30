@@ -108,7 +108,7 @@
   const panelTr = document.getElementById("panel-tr");
   const panelEn = document.getElementById("panel-en");
 
-  function select(lang){
+  function select(lang) {
     const tr = lang === "tr";
     tabTr.setAttribute("aria-selected", tr);
     tabEn.setAttribute("aria-selected", !tr);
@@ -120,18 +120,18 @@
   tabEn.addEventListener("click", () => select("en"));
 })();
 // === Tabs (TR/EN) ===
-(function initTabs(){
+(function initTabs() {
   const root = document.querySelector('[data-tabs]');
-  if(!root) return;
+  if (!root) return;
 
   const tabTr = document.getElementById('tab-tr');
   const tabEn = document.getElementById('tab-en');
   const panelTr = document.getElementById('panel-tr');
   const panelEn = document.getElementById('panel-en');
 
-  if(!tabTr || !tabEn || !panelTr || !panelEn) return;
+  if (!tabTr || !tabEn || !panelTr || !panelEn) return;
 
-  function select(lang){
+  function select(lang) {
     const tr = lang === 'tr';
     tabTr.setAttribute('aria-selected', String(tr));
     tabEn.setAttribute('aria-selected', String(!tr));
