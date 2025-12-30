@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="tr">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kars Kültürel Sokak Projesi</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -19,9 +20,7 @@
 
     <h2 style="margin:16px 0">Kişiler</h2>
 
-    <input id="search" class="card"
-      style="padding:12px;width:100%;margin:12px 0"
-      type="search"
+    <input id="search" class="card" style="padding:12px;width:100%;margin:12px 0" type="search"
       placeholder="Ara: Atatürk, İnönü, Sokak, Cadde, Bulvar...">
 
     <div id="filters" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
@@ -34,7 +33,31 @@
 
     <div class="grid" id="peopleGrid"></div>
 
-    <div class="footer">© 2025 Kars • Açık kaynak ve ücretsiz barındırma: GitHub Pages</div>
+    <footer class="site-footer">
+      <div class="footer-inner footer-center">
+
+        <div class="footer-top">
+          © 2025 Kars •
+          <a href="https://pages.github.com/" target="_blank" rel="noreferrer">GitHub Pages</a> •
+          Tüm hakları saklıdır
+        </div>
+
+        <div class="footer-bottom">
+          Hazırlayan: <strong>Mehmet Peker</strong> •
+          Proje fikri: <strong>Ecrin Su Kutluay</strong> & <strong>Nursena Kılıç</strong>
+        </div>
+
+        <!-- GitHub butonu (istersen kaldırabilirsin) -->
+        <a class="footer-gh" href="https://github.com/mehmettpeker" target="_blank" rel="noreferrer"
+          aria-label="GitHub">
+          GitHub
+        </a>
+
+      </div>
+    </footer>
+
+
+
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -77,8 +100,8 @@
       { name: "İbrahim Ethem Aykut", type: "Caddesi", href: "kisiler/ibrahim-ethem-aykut.html", lat: 40.59890, lng: 43.08741 },
       { name: "Hafız Kurban", type: "Sokağı", href: "kisiler/hafiz-kurban-sokak.html", lat: 40.60000, lng: 43.09500 },
       { name: "Hafız Paşa", type: "Caddesi", href: "kisiler/hafiz-pasa.html", lat: 40.60368, lng: 43.10925 },
-      { name:"Hakim Ali Rıza Aslan", type:"Caddesi", href:"kisiler/hakim-ali-riza-aslan.html", lat:40.60005, lng:43.09633 },
-      { name:"Halit Paşa", type:"Caddesi", href:"kisiler/halit-pasa.html", lat:40.60850, lng:43.09324 }
+      { name: "Hakim Ali Rıza Aslan", type: "Caddesi", href: "kisiler/hakim-ali-riza-aslan.html", lat: 40.60005, lng: 43.09633 },
+      { name: "Halit Paşa", type: "Caddesi", href: "kisiler/halit-pasa.html", lat: 40.60850, lng: 43.09324 }
 
 
     ];
@@ -88,15 +111,15 @@
       return (s || "")
         .toString()
         .toLowerCase()
-        .replaceAll("ı","i").replaceAll("İ","i")
-        .replaceAll("ş","s").replaceAll("Ş","s")
-        .replaceAll("ğ","g").replaceAll("Ğ","g")
-        .replaceAll("ü","u").replaceAll("Ü","u")
-        .replaceAll("ö","o").replaceAll("Ö","o")
-        .replaceAll("ç","c").replaceAll("Ç","c");
+        .replaceAll("ı", "i").replaceAll("İ", "i")
+        .replaceAll("ş", "s").replaceAll("Ş", "s")
+        .replaceAll("ğ", "g").replaceAll("Ğ", "g")
+        .replaceAll("ü", "u").replaceAll("Ü", "u")
+        .replaceAll("ö", "o").replaceAll("Ö", "o")
+        .replaceAll("ç", "c").replaceAll("Ç", "c");
     }
 
-    function typeKey(typeText){
+    function typeKey(typeText) {
       const t = normalizeTR(typeText);
       if (t.includes("bulvar")) return "bulvar";
       if (t.includes("cadde")) return "cadde";
@@ -146,7 +169,7 @@
     let activeType = "all";
     let query = "";
 
-    function applyFilters(){
+    function applyFilters() {
       const cards = document.querySelectorAll(".person");
 
       cards.forEach(card => {
@@ -194,47 +217,48 @@
     applyFilters();
   </script>
   <script>
-  function getTypeFromText(text){
-    const t = normalizeTR(text);
-    if (t.includes("bulvari")) return "bulvar";
-    if (t.includes("caddesi") || t.includes("cadde")) return "cadde";
-    if (t.includes("sokak") || t.includes("sokagi") || t.includes("sokağı")) return "sokak";
-    return "other";
-  }
+    function getTypeFromText(text) {
+      const t = normalizeTR(text);
+      if (t.includes("bulvari")) return "bulvar";
+      if (t.includes("caddesi") || t.includes("cadde")) return "cadde";
+      if (t.includes("sokak") || t.includes("sokagi") || t.includes("sokağı")) return "sokak";
+      return "other";
+    }
 
-  function updateCounts(){
-    const visibleCards = Array.from(document.querySelectorAll('#peopleGrid .card'))
-      .filter(c => c.style.display !== "none");
+    function updateCounts() {
+      const visibleCards = Array.from(document.querySelectorAll('#peopleGrid .card'))
+        .filter(c => c.style.display !== "none");
 
-    let cadde=0, sokak=0, bulvar=0;
-    visibleCards.forEach(card => {
-      const type = getTypeFromText(card.innerText);
-      if (type==="cadde") cadde++;
-      if (type==="sokak") sokak++;
-      if (type==="bulvar") bulvar++;
-    });
+      let cadde = 0, sokak = 0, bulvar = 0;
+      visibleCards.forEach(card => {
+        const type = getTypeFromText(card.innerText);
+        if (type === "cadde") cadde++;
+        if (type === "sokak") sokak++;
+        if (type === "bulvar") bulvar++;
+      });
 
-    document.getElementById("count-all").textContent = visibleCards.length;
-    document.getElementById("count-cadde").textContent = cadde;
-    document.getElementById("count-sokak").textContent = sokak;
-    document.getElementById("count-bulvar").textContent = bulvar;
-  }
+      document.getElementById("count-all").textContent = visibleCards.length;
+      document.getElementById("count-cadde").textContent = cadde;
+      document.getElementById("count-sokak").textContent = sokak;
+      document.getElementById("count-bulvar").textContent = bulvar;
+    }
 
-  // ilk yüklemede
-  updateCounts();
-
-  // arama sonrası da güncelle
-  search.addEventListener('input', () => {
+    // ilk yüklemede
     updateCounts();
-  });
 
-  // filtreye basınca da güncelle (senin filtre kodunun sonunda çağır)
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      setTimeout(updateCounts, 0);
+    // arama sonrası da güncelle
+    search.addEventListener('input', () => {
+      updateCounts();
     });
-  });
+
+    // filtreye basınca da güncelle (senin filtre kodunun sonunda çağır)
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTimeout(updateCounts, 0);
+      });
+    });
   </script>
 
 </body>
+
 </html>
