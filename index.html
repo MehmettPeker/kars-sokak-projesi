@@ -20,16 +20,19 @@
 
     <h2 style="margin:16px 0">Kişiler</h2>
 
-    <input id="search" class="card" style="padding:12px;width:100%;margin:12px 0" type="search"
-      placeholder="Ara: Atatürk, İnönü, Sokak, Cadde, Bulvar...">
 
-    <div id="filters" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
-      <button class="btn filter active" data-type="all">Tümü (<span id="count-all">0</span>)</button>
-      <button class="btn filter" data-type="cadde">Cadde (<span id="count-cadde">0</span>)</button>
-      <button class="btn filter" data-type="sokak">Sokak (<span id="count-sokak">0</span>)</button>
-      <button class="btn filter" data-type="bulvar">Bulvar (<span id="count-bulvar">0</span>)</button>
 
+    <div class="card toolbar">
+      <input id="search" type="search" placeholder="Ara: Atatürk, İnönü, Sokak, Cadde, Bulvar...">
+      <div id="filters" class="chips">
+        <button class="btn filter active" data-type="all">Tümü (<span id="count-all">0</span>)</button>
+        <button class="btn filter" data-type="cadde">Cadde (<span id="count-cadde">0</span>)</button>
+        <button class="btn filter" data-type="sokak">Sokak (<span id="count-sokak">0</span>)</button>
+        <button class="btn filter" data-type="bulvar">Bulvar (<span id="count-bulvar">0</span>)</button>
+      </div>
     </div>
+
+
 
     <div class="grid" id="peopleGrid"></div>
 
