@@ -1,4 +1,6 @@
-/* Kars Theme (Ice blue + stone) */
+/* =========================
+   Theme
+   ========================= */
 :root {
   --bg: #eaf2f8;
   --card: #ffffff;
@@ -10,7 +12,7 @@
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body {
@@ -23,43 +25,25 @@ body {
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 20px
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-/* Header typografi düzeltme (kabalığı azalt) */
-.header h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: .2px;
-  color: #1f3f7a;
-  line-height: 1.15;
-}
-
-.header p {
-  max-width: 70ch;
+  padding: 20px;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  color: var(--primary)
+  color: var(--primary);
 }
 
 p {
   color: var(--muted);
   line-height: 1.65;
-  margin: 10px 0
+  margin: 10px 0;
 }
 
+/* =========================
+   Cards + Grid
+   ========================= */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -71,22 +55,175 @@ p {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px
+  gap: 18px;
 }
 
+.card.person {
+  padding: 18px;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.card.person:hover {
+  transform: translateY(-2px);
+  border-color: rgba(30, 58, 138, .22);
+  box-shadow: 0 18px 40px rgba(30, 58, 138, .12);
+}
+
+.card.person h3 {
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+.card.person p {
+  margin: 0;
+}
+
+/* Button (link) */
 a.btn {
   display: inline-block;
   background: var(--primary);
   color: #fff;
-  padding: 10px 14px;
-  border-radius: 10px;
+  padding: 10px 16px;
+  border-radius: 12px;
   text-decoration: none;
 }
 
 a.btn:hover {
-  filter: brightness(.95)
+  filter: brightness(.95);
 }
 
+/* =========================
+   Header
+   ========================= */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  text-align: left;
+
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(30, 58, 138, .08);
+}
+
+.header h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #1f3f7a;
+  line-height: 1.15;
+}
+
+.header p {
+  max-width: 70ch;
+  margin: 4px 0 0;
+}
+
+/* =========================
+   Leaflet Map
+   ========================= */
+#map {
+  height: 460px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(17, 24, 39, .06);
+}
+
+.leaflet-popup-content a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.leaflet-popup-content a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Toolbar (Search + Filters)  ✅ Tek satır
+   ========================= */
+.card.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin: 12px 0 16px;
+  flex-wrap: nowrap;
+  /* tek satır */
+}
+
+#search {
+  flex: 1;
+  min-width: 260px;
+  height: 44px;
+  padding: 0 14px 0 42px;
+  /* solda ikon boşluğu */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  outline: none;
+
+  /* basit arama ikonu */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%239ca3af' viewBox='0 0 24 24'%3E%3Cpath d='M21 20l-5.7-5.7a7 7 0 10-1.4 1.4L20 21z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  background-size: 18px;
+}
+
+#search:focus {
+  border-color: rgba(30, 58, 138, .35);
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, .12);
+}
+
+.chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  /* tek satır */
+  white-space: nowrap;
+  overflow-x: auto;
+  /* sığmazsa yana kaydır */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+  max-width: 55%;
+}
+
+.btn.filter {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .95rem;
+  box-shadow: 0 6px 14px rgba(17, 24, 39, .06);
+}
+
+.btn.filter.active {
+  border-color: rgba(30, 58, 138, .35);
+  background: rgba(30, 58, 138, .08);
+  color: var(--primary);
+  box-shadow: 0 10px 22px rgba(30, 58, 138, .14);
+}
+
+/* Chips scrollbar (opsiyonel) */
+.chips::-webkit-scrollbar {
+  height: 6px;
+}
+
+.chips::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .18);
+  border-radius: 10px;
+}
+
+/* =========================
+   Footer
+   ========================= */
 .site-footer {
   margin-top: 32px;
   padding: 22px 16px;
@@ -101,7 +238,6 @@ a.btn:hover {
 
 .footer-center {
   text-align: center;
-  /* 🔑 ORTALAMA */
 }
 
 .footer-top {
@@ -126,7 +262,6 @@ a.btn:hover {
   text-decoration: underline;
 }
 
-/* GitHub küçük buton */
 .footer-gh {
   display: inline-block;
   margin-top: 12px;
@@ -143,45 +278,16 @@ a.btn:hover {
   background: #eef2f7;
 }
 
-/* mobil */
-@media (max-width: 640px) {
-  .site-footer {
-    padding: 20px 12px;
-  }
-}
-
-
 /* =========================
-   Leaflet Map
-   ========================= */
-#map {
-  height: 460px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(17, 24, 39, .06);
-}
-
-.leaflet-popup-content a {
-  color: var(--primary);
-  text-decoration: none
-}
-
-.leaflet-popup-content a:hover {
-  text-decoration: underline
-}
-
-/* =========================
-   Profile v2 (Modern + Arşiv)
+   Profile pages (profile.js ile uyumlu)
    ========================= */
 .profile {
   display: grid;
   grid-template-columns: 240px 1fr;
-  /* daha sakin */
   gap: 18px;
   align-items: start;
 }
 
-/* Arşiv görsel kartı */
 .archive {
   background: linear-gradient(180deg, #fbf7ea 0%, #f3ead0 100%);
   border: 1px solid rgba(0, 0, 0, .10);
@@ -206,7 +312,6 @@ a.btn:hover {
   width: 100%;
   height: auto;
   max-height: 280px;
-  /* resim daha az baskın */
   object-fit: contain;
   border-radius: 14px;
   background: rgba(255, 255, 255, .55);
@@ -241,7 +346,6 @@ a.btn:hover {
   font-weight: 600;
 }
 
-/* Üst özet kartı */
 .summary {
   display: grid;
   gap: 10px;
@@ -260,20 +364,18 @@ a.btn:hover {
 .kv {
   display: grid;
   grid-template-columns: 100px 1fr;
-  /* daha kompakt */
   gap: 6px;
   font-size: .95rem;
 }
 
 .kv strong {
-  color: var(--fg)
+  color: var(--fg);
 }
 
 .kv span {
-  color: var(--muted)
+  color: var(--muted);
 }
 
-/* Tabs */
 .tabs {
   margin-top: 12px;
 }
@@ -289,7 +391,6 @@ a.btn:hover {
   border: 1px solid var(--border);
   background: #fff;
   padding: 6px 10px;
-  /* daha küçük */
   border-radius: 999px;
   cursor: pointer;
   color: var(--muted);
@@ -309,11 +410,6 @@ a.btn:hover {
   max-width: 68ch;
 }
 
-.tab-panel p {
-  margin-top: 10px
-}
-
-/* Kişi metin alanı */
 .street-section {
   max-width: 68ch;
 }
@@ -322,13 +418,11 @@ a.btn:hover {
   margin-bottom: 12px;
 }
 
-/* QR alanı */
 .qr {
   margin-top: 18px;
   display: flex;
   gap: 16px;
   align-items: center;
-
   padding: 14px;
   border-radius: 14px;
   border: 1px solid var(--border);
@@ -343,78 +437,10 @@ a.btn:hover {
   background: #fff;
 }
 
-.portrait {
-  width: 240px;
-  height: 320px;
-  background-image: url("../assets/img/arsiv-grid.png");
-  background-size: 400% 400%;
-  /* 4 sütun x 4 satır gibi düşün */
-  background-repeat: no-repeat;
-}
-
-/* Her kişi sadece pozisyon */
-.alparslan-turkes {
-  background-position: 50% 0%;
-}
-
-.ismet-inonu {
-  background-position: 25% 0%;
-}
-
-.mustafa-kemal {
-  background-position: 0% 0%;
-}
-
-/* === Profile typography fix + callout === */
-.subtitle {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: .95rem;
-}
-
-.page-profile .street-section h2 {
-  font-size: 1.25rem;
-  margin: 14px 0 8px;
-  letter-spacing: -0.01em;
-}
-
-.page-profile .street-section h3 {
-  font-size: 1rem;
-  margin: 14px 0 6px;
-  color: var(--primary);
-}
-
-.page-profile .street-section p {
-  margin: 10px 0;
-}
-
-.callout {
-  margin-top: 14px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(30, 58, 138, .04);
-}
-
-.callout .callout-title {
-  margin: 0 0 6px;
-  font-weight: 800;
-  color: var(--primary);
-  font-size: 1rem;
-}
-
-.callout p {
-  margin: 0;
-}
-
-.btn.filter.active {
-  background: #222;
-  color: #fff;
-}
-
-
-/* Mobil */
-@media(max-width: 760px) {
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 760px) {
   .profile {
     grid-template-columns: 1fr;
   }
@@ -431,5 +457,27 @@ a.btn:hover {
   .qr img {
     width: 220px;
     height: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  #map {
+    height: 340px;
+  }
+
+  .card.toolbar {
+    gap: 10px;
+  }
+
+  #search {
+    min-width: 180px;
+  }
+
+  .chips {
+    max-width: 100%;
+  }
+
+  .site-footer {
+    padding: 20px 12px;
   }
 }
