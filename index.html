@@ -155,9 +155,20 @@
       card.dataset.search = normalizeTR(title);
 
       card.innerHTML = `
-        <h3>${title}</h3>
-        <p><a class="btn" href="${p.href}">Profili Gör</a></p>
-      `;
+  <div class="person-body">
+    <h3>${title}</h3>
+  </div>
+
+  <a class="btn btn-profile" href="${p.href}">
+    <span>Profili Gör</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 12h14M13 5l6 7-6 7"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+`;
+
       grid.appendChild(card);
 
       // --- Marker
