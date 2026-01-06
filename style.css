@@ -64,6 +64,7 @@ p {
 }
 
 .card.person:hover {
+  box-shadow: 0 18px 42px rgba(30, 58, 138, .45);
   transform: translateY(-2px);
   border-color: rgba(30, 58, 138, .22);
   box-shadow: 0 18px 40px rgba(30, 58, 138, .12);
@@ -78,14 +79,46 @@ p {
   margin: 0;
 }
 
-/* Button (link) */
-a.btn {
-  display: inline-block;
-  background: var(--primary);
+/* =========================
+   Profile Button (Modern CTA)
+   ========================= */
+a.btn-profile {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 16px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #1e3a8a, #274cbb);
+  background-size: 200% 200%;
+  background-position: left center;
   color: #fff;
-  padding: 10px 16px;
-  border-radius: 12px;
   text-decoration: none;
+
+  font-weight: 600;
+  letter-spacing: .2px;
+
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  box-shadow: 0 10px 24px rgba(30, 58, 138, .25);
+}
+
+a.btn-profile svg {
+  width: 18px;
+  height: 18px;
+  transition: transform .2s ease;
+}
+
+a.btn-profile:hover {
+  background-position: right center;
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 36px rgba(30, 58, 138, .35);
+}
+
+a.btn-profile:hover svg {
+  transform: translateX(4px);
 }
 
 a.btn:hover {
@@ -480,4 +513,8 @@ a.btn:hover {
   .site-footer {
     padding: 20px 12px;
   }
+}
+
+.person-body {
+  min-height: 60px;
 }
